@@ -1,27 +1,23 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useHistory } from 'react-router';
-
+import React from "react";
+import { useEffect } from "react";
+import { useHistory } from "react-router";
 
 export default function AdminDash() {
+  let history = useHistory();
 
-    let history = useHistory();
-    
-    // useEffect(() => {
-    //     if(localStorage.getItem('token')){
-         
-    //     }
-    //     else{
-    //         history.push('/login');
-    //     }
-       
-    // }, [])
+  // useEffect(() => {
+  //     if(localStorage.getItem('token')){
 
-    
+  //     }
+  //     else{
+  //         history.push('/login');
+  //     }
 
-    return (
-        <div>
-            <h2>Admin Dashboasrd</h2>
-        </div>
-    )
+  // }, [])
+
+  return (
+    <div>
+      <h2>Admin Dashboasrd</h2>
+    </div>
+  );
 }

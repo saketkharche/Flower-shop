@@ -85,7 +85,7 @@ export const Products = () => {
                                     </div>
                                     <div className="content">
                                         <h3>{ele.name}</h3>
-                                        <div className="price"> ${ele.price} <span>$250</span> </div>
+                                        <div className="price"> ₹{ele.price} <span>₹250</span> </div>
                                     </div>
                                 </div>)
                             })}
