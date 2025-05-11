@@ -18,7 +18,7 @@ function Team() {
           <div className="row">
             <div className="team-items">
               <div className="item">
-                <img src="images/about/team-2.jpg" alt="team" />
+                <img src="images/about/team-1.jpg" alt="team" />
                 <div className="inner">
                   <div className="info">
                     <h5>Saket Kharche</h5>
@@ -90,8 +90,8 @@ function Team() {
                 <img src="images/about/team-2.jpg" alt="team" />
                 <div className="inner">
                   <div className="info">
-                    <h5>Sushant Yadav</h5>
-                    <p>Designer</p>
+                    <h5>God Father of Problem Solving</h5>
+                    <p>Problem Solver</p>
                     <div className="social-links">
                       <Link to="/">
                         <span className="fa fa-facebook"></span>

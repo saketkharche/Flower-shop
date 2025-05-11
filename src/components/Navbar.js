@@ -32,7 +32,7 @@ function Navbar(props) {
                 <input type="checkbox" name="" id="toggler" />
                 <label htmlFor="toggler" className="fas fa-bars"></label>
 
-                <Link to="/" className="logo">flower<span>.</span></Link >
+                <Link to="/" className="logo">Fern & Petals<span>.</span></Link >
 
                 <nav className="navbar">
                 <ScrollLink  to="home" spy={true} smooth={false} duration={500}>Home</ScrollLink>
