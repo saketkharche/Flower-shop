@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: larger;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 32rem;
+    padding: 2rem;
+    border: 0.2rem #c0c0c0 solid;
+    border-radius: 0.5rem;
+    list-style-type: none;
+  }
+  .form-container li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: large;
+  }
+  input {
+    padding: 1rem;
+    border: 0.1rem #c0c0c0 solid;
+    border-radius: 0.5rem;
+  }
+
+  .signIn{
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  }

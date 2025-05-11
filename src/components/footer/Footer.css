@@ -1,0 +1,13 @@
+.container2{
+    margin:0;
+    /* background-color: #212529; */
+    color: white;
+
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
