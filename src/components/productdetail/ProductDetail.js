@@ -60,7 +60,7 @@ export default function ProductDetail(props) {
                   </li>
                   <li>({product.numReviews} Reviews)</li>
                   <li>
-                    Price : <b>${product.price}</b>
+                    Price : <b>₹{product.price}</b>
                   </li>
                   <li>
                     Description:
