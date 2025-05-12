@@ -1,0 +1,147 @@
+Directory structure:
+└── FlowerShop/
+     ├── backend/
+     │    ├── config/
+     │    │    └── default.json
+     │    ├── db.js
+     │    ├── index.js
+     │    ├── main.js
+     │    ├── middleware/
+     │    │    └── fetchuser.js
+     │    ├── models/
+     │    │    ├── Cart.js
+     │    │    ├── Order.js
+     │    │    ├── Product.js
+     │    │    └── User.js
+     │    ├── notes
+     │    ├── package-lock.json
+     │    ├── package.json
+     │    └── routes/
+     │         ├── auth.js
+     │         ├── cart.js
+     │         ├── contact.js
+     │         ├── order.js
+     │         └── products.js
+     ├── package-lock.json
+     ├── package.json
+     ├── public/
+     │    ├── favicon.ico
+     │    ├── images/
+     │    │    ├── about/
+     │    │    │    ├── team-1.jpg
+     │    │    │    ├── team-2.jpg
+     │    │    │    ├── team-2.png
+     │    │    │    ├── team-21.jpg
+     │    │    │    ├── team-3 - Copy.jpg
+     │    │    │    ├── team-3.jpg
+     │    │    │    └── team-4.jpg
+     │    │    ├── home/
+     │    │    │    ├── about-vid.mp4
+     │    │    │    ├── contact-img.svg
+     │    │    │    ├── home-bg.jpg
+     │    │    │    ├── icon-1.png
+     │    │    │    ├── icon-2.png
+     │    │    │    ├── icon-3.png
+     │    │    │    ├── icon-4.png
+     │    │    │    ├── img-1.jpg
+     │    │    │    ├── img-2.jpg
+     │    │    │    ├── img-3.jpg
+     │    │    │    ├── img-4.jpg
+     │    │    │    ├── img-5.jpg
+     │    │    │    ├── img-6.jpg
+     │    │    │    ├── img-7.jpg
+     │    │    │    ├── img-8.jpg
+     │    │    │    ├── img-9.jpg
+     │    │    │    ├── payment.png
+     │    │    │    ├── pic-1.jpeg
+     │    │    │    ├── pic-1.png
+     │    │    │    ├── pic-13.png
+     │    │    │    ├── pic-2.jpeg
+     │    │    │    ├── pic-2.png
+     │    │    │    ├── pic-23.png
+     │    │    │    ├── pic-3.jpeg
+     │    │    │    ├── pic-3.png
+     │    │    │    └── pic-33.png
+     │    │    └── lily-bouquet.jpg
+     │    ├── index.html
+     │    ├── lilly.avif
+     │    ├── lily-bouquet.jpg
+     │    ├── lily.jpg
+     │    ├── logo192.png
+     │    ├── logo512.png
+     │    ├── manifest.json
+     │    ├── robots.txt
+     │    ├── rose-bouquet.jpg.jpg
+     │    ├── rose.jpg
+     │    ├── script.js
+     │    ├── sunflower-vase.jpg
+     │    ├── sunflower.jpg
+     │    ├── tulip.jpg
+     │    └── tulip.webp
+     ├── README.md
+     ├── src/
+     │    ├── actions/
+     │    │    ├── cartActions.js
+     │    │    ├── errorActions.js
+     │    │    ├── orderActions.js
+     │    │    ├── productActions.js
+     │    │    └── userActions.js
+     │    ├── App.css
+     │    ├── App.js
+     │    ├── App.test.js
+     │    ├── components/
+     │    │    ├── about/
+     │    │    │    ├── About.js
+     │    │    │    ├── style.css
+     │    │    │    └── Team.js
+     │    │    ├── AdminDash.js
+     │    │    ├── AdminDashboard.css
+     │    │    ├── cart/
+     │    │    │    ├── Cart.css
+     │    │    │    └── Cart.js
+     │    │    ├── Contact.js
+     │    │    ├── footer/
+     │    │    │    ├── Footer.css
+     │    │    │    └── Footer.js
+     │    │    ├── home/
+     │    │    │    ├── Home.js
+     │    │    │    ├── images/
+     │    │    │    │    ├── home-bg.jpg
+     │    │    │    │    ├── home-bg1.jpg
+     │    │    │    │    └── home-bg3.jpg
+     │    │    │    └── style.css
+     │    │    ├── login/
+     │    │    │    ├── Login.css
+     │    │    │    └── Login.js
+     │    │    ├── Navbar.js
+     │    │    ├── NotFound.js
+     │    │    ├── productdetail/
+     │    │    │    ├── ProductDetail.css
+     │    │    │    └── ProductDetail.js
+     │    │    ├── Products/
+     │    │    │    ├── Product.css
+     │    │    │    └── Products.js
+     │    │    ├── Review.js
+     │    │    ├── signup/
+     │    │    │    ├── Signup.css
+     │    │    │    └── Signup.js
+     │    │    ├── UserProfile.css
+     │    │    └── UserProfile.js
+     │    ├── constants/
+     │    │    ├── cartConstants.js
+     │    │    ├── orderConstants.js
+     │    │    ├── productConstants.js
+     │    │    └── userConstants.js
+     │    ├── index.css
+     │    ├── index.js
+     │    ├── reducers/
+     │    │    ├── cartReducer.js
+     │    │    ├── errorReducer.js
+     │    │    ├── orderReducer.js
+     │    │    ├── productReducer.js
+     │    │    ├── rootReducer.js
+     │    │    └── userReducer.js
+     │    ├── reportWebVitals.js
+     │    ├── setupTests.js
+     │    └── store.js
+     └── structre.txt

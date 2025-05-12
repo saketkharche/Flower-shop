@@ -22,6 +22,7 @@ app.use("/cart", require("./routes/cart"));
 app.use("/order", require("./routes/order"));
 app.use("/", contactRoute);
 
+app.use('/admin', require('./routes/admin'));
 
 
 app.listen(port, () => {
