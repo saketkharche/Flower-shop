@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>slides.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///r%3A/2.Travail/1.Enseignement/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css"><link rel="stylesheet" href="file:///d%3A/rdaros/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="welcome-to-slidev">Welcome to Slidev</h1>
+<p>Presentation slides for developers</p>
+<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
+  Press Space for next page <carbon:arrow-right>
+</carbon:arrow-right></div>
+<div class="abs-br m-6 text-xl">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
+    <carbon:edit>
+  </carbon:edit></button>
+  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+    <carbon:logo-github>
+  </carbon:logo-github></a>
+</div>
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
+<hr>
+<h2 id="transition-fade-out">transition: fade-out</h2>
+<h1 id="what-is-slidev">What is Slidev?</h1>
+<p>Slidev is a slides maker and presenter designed for developers, consist of the following features</p>
+<ul>
+<li>📝 <strong>Text-based</strong> - focus on the content with Markdown, and then style them later</li>
+<li>🎨 <strong>Themable</strong> - themes can be shared and re-used as npm packages</li>
+<li>🧑‍💻 <strong>Developer Friendly</strong> - code highlighting, live coding with autocompletion</li>
+<li>🤹 <strong>Interactive</strong> - embed Vue components to enhance your expressions</li>
+<li>🎥 <strong>Recording</strong> - built-in recording and camera view</li>
+<li>📤 <strong>Portable</strong> - export to PDF, PPTX, PNGs, or even a hostable SPA</li>
+<li>🛠 <strong>Hackable</strong> - virtually anything that's possible on a webpage is possible in Slidev<br>
+<br><br>
+<br></li>
+</ul>
+<p>Read more about <a href="https://sli.dev/guide/why">Why Slidev?</a></p>
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/features/slide-scope-style
+-->
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+<!--
+Here is another comment.
+-->
+<hr>
+<h2 id="transition-slide-uplevel-2">transition: slide-up<br>
+level: 2</h2>
+<h1 id="navigation">Navigation</h1>
+<p>Hover on the bottom-left corner to see the navigation's controls panel, <a href="https://sli.dev/guide/ui#navigation-bar">learn more</a></p>
+<h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>right</kbd> / <kbd>space</kbd></td>
+<td>next animation or slide</td>
+</tr>
+<tr>
+<td><kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd></td>
+<td>previous animation or slide</td>
+</tr>
+<tr>
+<td><kbd>up</kbd></td>
+<td>previous slide</td>
+</tr>
+<tr>
+<td><kbd>down</kbd></td>
+<td>next slide</td>
+</tr>
+</tbody>
+</table>
+<!-- https://sli.dev/guide/animations.html#click-animation -->
+<p><img
+  v-click
+  class="absolute -bottom-9 -left-7 w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+  alt=""
+/></p>
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<hr>
+<h2 id="layout-two-colslayoutclass-gap-16">layout: two-cols<br>
+layoutClass: gap-16</h2>
+<h1 id="table-of-contents">Table of contents</h1>
+<p>You can use the <code>Toc</code> component to generate a table of contents for your slides:</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">Toc</span> <span class="hljs-attr">minDepth</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">maxDepth</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+</div></code></pre>
+<p>The title will be inferred from your slide content, or you can override it with <code>title</code> and <code>level</code> in your frontmatter.</p>
+<p>::right::</p>
+<toc text-sm mindepth="1" maxdepth="2">
+</toc><hr>
+<h2 id="layout-image-rightimage-httpscoverslidev">layout: image-right<br>
+image: https://cover.sli.dev</h2>
+<h1 id="code">Code</h1>
+<p>Use code snippets and get the highlighting directly, and even types hover!</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// TwoSlash enables TypeScript hover information</span>
+<span class="hljs-comment">// and errors in markdown code blocks</span>
+<span class="hljs-comment">// More at https://shiki.style/packages/twoslash</span>
+
+<span class="hljs-keyword">import</span> { computed, ref } <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+
+<span class="hljs-keyword">const</span> count = ref(<span class="hljs-number">0</span>)
+<span class="hljs-keyword">const</span> doubled = computed(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> count.value * <span class="hljs-number">2</span>)
+
+doubled.value = <span class="hljs-number">2</span>
+</div></code></pre>
+<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowsize="1">
+</arrow><!-- This allow you to embed external code blocks -->
+<p>&lt;&lt;&lt; @/snippets/external.ts#snippet</p>
+<!-- Footer -->
+<p><a href="https://sli.dev/features/line-highlighting">Learn more</a></p>
+<!-- Inline style -->
+<style>
+.footnotes-sep {
+  @apply mt-5 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+</style>
+<!--
+Notes can also sync with clicks
+
+[click] This will be highlighted after the first click
+
+[click] Highlighted with `count = ref(0)`
+
+[click:3] Last click (skip two clicks)
+-->
+<hr>
+<h2 id="level-2">level: 2</h2>
+<h1 id="shiki-magic-move">Shiki Magic Move</h1>
+<p>Powered by <a href="https://shiki-magic-move.netlify.app/">shiki-magic-move</a>, Slidev supports animations across multiple code snippets.</p>
+<p>Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:</p>
+<pre class="hljs"><code><div><span class="hljs-code">```</span>ts {<span class="hljs-emphasis">*|2|*</span>}
+// step 1
+const author = reactive({
+  name: 'John Doe',
+  books: [
+<span class="hljs-code">    'Vue 2 - Advanced Guide',</span>
+<span class="hljs-code">    'Vue 3 - Basic Guide',</span>
+<span class="hljs-code">    'Vue 4 - The Mystery'</span>
+  ]
+})
+<span class="hljs-code">```
+
+```ts {*|1-2|3-4|3-4,8}
+// step 2
+export default {
+  data() {
+    return {
+      author: {
+        name: 'John Doe',
+        books: [
+          'Vue 2 - Advanced Guide',
+          'Vue 3 - Basic Guide',
+          'Vue 4 - The Mystery'
+        ]
+      }
+    }
+  }
+}
+```</span>
+
+<span class="hljs-code">```ts
+// step 3
+export default {
+  data: () =&gt; ({
+    author: {
+      name: 'John Doe',
+      books: [
+        'Vue 2 - Advanced Guide',
+        'Vue 3 - Basic Guide',
+        'Vue 4 - The Mystery'
+      ]
+    }
+  })
+}
+```</span>
+
+Non-code blocks are ignored.
+
+<span class="hljs-code">```vue
+&lt;!-- step 4 --&gt;
+&lt;script setup&gt;
+const author = {
+  name: 'John Doe',
+  books: [
+    'Vue 2 - Advanced Guide',
+    'Vue 3 - Basic Guide',
+    'Vue 4 - The Mystery'
+  ]
+}
+&lt;/script&gt;
+```</span>
+</div></code></pre>
+<hr>
+<h1 id="components">Components</h1>
+<div grid="~ cols-2 gap-4">
+<div>
+</div></div><p>You can use Vue components directly inside your slides.</p>
+<p>We have provided a few built-in components like <code>&lt;Tweet/&gt;</code> and <code>&lt;Youtube/&gt;</code> that you can use directly. And adding your custom components is also super easy.</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span> <span class="hljs-attr">:count</span>=<span class="hljs-string">"10"</span> /&gt;</span>
+</div></code></pre>
+<!-- ./components/Counter.vue -->
+<counter :count="10" m="t-4">
+</counter><p>Check out <a href="https://sli.dev/builtin/components.html">the guides</a> for more.</p>
+
+<div>
+</div><pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">Tweet</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"1390115482657726468"</span> /&gt;</span>
+</div></code></pre>
+<tweet id="1390115482657726468" scale="0.65">
+</tweet>
+
+<!--
+Presenter note with **bold**, *italic*, and ~~striked~~ text.
+
+Also, HTML elements are valid:
+<div class="flex w-full">
+  <span style="flex-grow: 1;">Left content</span>
+  <span>Right content</span>
+</div>
+-->
+<hr>
+<h2 id="class-px-20">class: px-20</h2>
+<h1 id="themes">Themes</h1>
+<p>Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just <strong>one edit</strong> in your frontmatter:</p>
+<div grid="~ cols-2 gap-2" m="t-2">
+</div><pre class="hljs"><code><div><span class="hljs-meta">---</span>
+<span class="hljs-attr">theme:</span> <span class="hljs-string">default</span>
+<span class="hljs-meta">---</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-meta">---</span>
+<span class="hljs-attr">theme:</span> <span class="hljs-string">seriph</span>
+<span class="hljs-meta">---</span>
+</div></code></pre>
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt>
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt>
+
+<p>Read more about <a href="https://sli.dev/guide/theme-addon#use-theme">How to use a theme</a> and<br>
+check out the <a href="https://sli.dev/resources/theme-gallery">Awesome Themes Gallery</a>.</p>
+<hr>
+<h1 id="clicks-animations">Clicks Animations</h1>
+<p>You can add <code>v-click</code> to elements to add a click animation.</p>
+<div v-click>
+</div><p>This shows up when you click the slide:</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-click</span>&gt;</span>This shows up when you click the slide.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div></code></pre>
+
+<br>
+<v-click>
+</v-click><p>The <span v-mark.red="3"><code>v-mark</code> directive</span><br>
+also allows you to add<br>
+<span v-mark.circle.orange="4">inline marks</span><br>
+, powered by <a href="https://roughnotation.com/">Rough Notation</a>:</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-mark.underline.orange</span>&gt;</span>inline markers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</div></code></pre>
+
+<div mt-20 v-click>
+</div><p><a href="https://sli.dev/guide/animations#click-animation">Learn more</a></p>
+
+<hr>
+<h1 id="motions">Motions</h1>
+<p>Motion animations are powered by <a href="https://motion.vueuse.org/">@vueuse/motion</a>, triggered by <code>v-motion</code> directive.</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">v-motion</span>
+  <span class="hljs-attr">:initial</span>=<span class="hljs-string">"{ x: -80 }"</span>
+  <span class="hljs-attr">:enter</span>=<span class="hljs-string">"{ x: 0 }"</span>
+  <span class="hljs-attr">:click-3</span>=<span class="hljs-string">"{ x: 80 }"</span>
+  <span class="hljs-attr">:leave</span>=<span class="hljs-string">"{ x: 1000 }"</span>
+&gt;</span>
+  Slidev
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div></code></pre>
+<div class="w-60 relative">
+  <div class="relative w-40 h-40">
+    <img v-motion :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }" :enter="final" class="absolute inset-0" src="https://sli.dev/logo-square.png" alt>
+    <img v-motion :initial="{ y: 500, x: -100, scale: 2 }" :enter="final" class="absolute inset-0" src="https://sli.dev/logo-circle.png" alt>
+    <img v-motion :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }" :enter="final" class="absolute inset-0" src="https://sli.dev/logo-triangle.png" alt>
+  </div>
+</div>  <div class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1" v-motion :initial="{ x: -80, opacity: 0}" :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
+    Slidev
+  </div>
+
+<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
+<script setup lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script>
+<div v-motion :initial="{ x:35, y: 30, opacity: 0}" :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+</div><p><a href="https://sli.dev/guide/animations.html#motion">Learn more</a></p>
+
+<hr>
+<h1 id="latex">LaTeX</h1>
+<p>LaTeX is supported out-of-box. Powered by <a href="https://katex.org/">KaTeX</a>.</p>
+<div h-3>
+</div><p>Inline $\sqrt{3x-1}+(1+x)^2$</p>
+<p>Block<br>
+$$ {1|3|all}<br>
+\begin{aligned}<br>
+\nabla \cdot \vec{E} &amp;= \frac{\rho}{\varepsilon_0} \<br>
+\nabla \cdot \vec{B} &amp;= 0 \<br>
+\nabla \times \vec{E} &amp;= -\frac{\partial\vec{B}}{\partial t} \<br>
+\nabla \times \vec{B} &amp;= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}<br>
+\end{aligned}<br>
+$$</p>
+<p><a href="https://sli.dev/features/latex">Learn more</a></p>
+<hr>
+<h1 id="diagrams">Diagrams</h1>
+<p>You can create diagrams / graphs from textual descriptions, directly in your Markdown.</p>
+<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+</div><pre class="hljs"><code><div>sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    Note over Alice,John: A typical interaction
+</div></code></pre>
+<pre class="hljs"><code><div>graph TD
+B[Text] --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+</div></code></pre>
+<pre class="hljs"><code><div>mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness&lt;br/&gt;and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+</div></code></pre>
+<pre class="hljs"><code><div>@startuml
+
+package &quot;Some Group&quot; {
+  HTTP - [First Component]
+  [Another Component]
+}
+
+node &quot;Other Groups&quot; {
+  FTP - [Second Component]
+  [First Component] --&gt; FTP
+}
+
+cloud {
+  [Example 1]
+}
+
+database &quot;MySql&quot; {
+  folder &quot;This is my folder&quot; {
+    [Folder 3]
+  }
+  frame &quot;Foo&quot; {
+    [Frame 4]
+  }
+}
+
+[Another Component] --&gt; [Example 1]
+[Example 1] --&gt; [Folder 3]
+[Folder 3] --&gt; [Frame 4]
+
+@enduml
+</div></code></pre>
+
+<p>Learn more: <a href="https://sli.dev/features/mermaid">Mermaid Diagrams</a> and <a href="https://sli.dev/features/plantuml">PlantUML Diagrams</a></p>
+<hr>
+<h2 id="foo-bardragpossquare-69132167-16">foo: bar<br>
+dragPos:<br>
+square: 691,32,167,_,-16</h2>
+<h1 id="draggable-elements">Draggable Elements</h1>
+<p>Double-click on the draggable elements to edit their positions.</p>
+<br>
+<h6 id="directive-usage">Directive Usage</h6>
+<pre class="hljs"><code><div><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">v-drag</span>=<span class="hljs-string">"'square'"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://sli.dev/logo.png"</span>&gt;</span></span>
+</div></code></pre>
+<br>
+<h6 id="component-usage">Component Usage</h6>
+<pre class="hljs"><code><div><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">v-drag</span> <span class="hljs-attr">text-3xl</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"i-carbon:arrow-up"</span> /&gt;</span></span>
+  Use the <span class="hljs-code">`v-drag`</span> component to have a draggable container!
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">v-drag</span>&gt;</span></span>
+</div></code></pre>
+<v-drag pos="663,206,261,_,-15">
+  <div text-center text-3xl border border-main rounded>
+    Double-click me!
+  </div>
+</v-drag>
+<img v-drag="&apos;square&apos;" src="https://sli.dev/logo.png">
+<h6 id="draggable-arrow">Draggable Arrow</h6>
+<pre class="hljs"><code><div><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">v-drag-arrow</span> <span class="hljs-attr">two-way</span> /&gt;</span></span>
+</div></code></pre>
+<v-drag-arrow pos="67,452,253,46" two-way op70>
+</v-drag-arrow><hr>
+<h2 id="src-pagesimported-slidesmdhide-false">src: ./pages/imported-slides.md<br>
+hide: false</h2>
+<hr>
+<h1 id="monaco-editor">Monaco Editor</h1>
+<p>Slidev provides built-in Monaco Editor support.</p>
+<p>Add <code>{monaco}</code> to the code block to turn it into an editor:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> { ref } <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+<span class="hljs-keyword">import</span> { emptyArray } <span class="hljs-keyword">from</span> <span class="hljs-string">'./external'</span>
+
+<span class="hljs-keyword">const</span> arr = ref(emptyArray(<span class="hljs-number">10</span>))
+</div></code></pre>
+<p>Use <code>{monaco-run}</code> to create an editor that can execute the code directly in the slide:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> { version } <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+<span class="hljs-keyword">import</span> { emptyArray, sayHello } <span class="hljs-keyword">from</span> <span class="hljs-string">'./external'</span>
+
+sayHello()
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`vue <span class="hljs-subst">${version}</span>`</span>)
+<span class="hljs-built_in">console</span>.log(emptyArray&lt;<span class="hljs-built_in">number</span>&gt;(<span class="hljs-number">10</span>).reduce(<span class="hljs-function"><span class="hljs-params">fib</span> =&gt;</span> [...fib, fib.at(<span class="hljs-number">-1</span>)! + fib.at(<span class="hljs-number">-2</span>)!], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]))
+</div></code></pre>
+<hr>
+<h2 id="layout-centerclass-text-center">layout: center<br>
+class: text-center</h2>
+<h1 id="learn-more">Learn More</h1>
+<p><a href="https://sli.dev">Documentation</a> · <a href="https://github.com/slidevjs/slidev">GitHub</a> · <a href="https://sli.dev/resources/showcases">Showcases</a></p>
+<poweredbyslidev mt-10>
+</poweredbyslidev>
+</body>
+
+</html>
